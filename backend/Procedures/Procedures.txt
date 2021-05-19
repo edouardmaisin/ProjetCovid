@@ -1,0 +1,59 @@
+ALTER PROCEDURE "DBA"."afficherPersonnes" ()
+RESULT (idPersonne integer)
+
+BEGIN
+
+select persId 
+from tbPersonnes
+
+END
+
+
+ALTER PROCEDURE "DBA"."afficherVilles"()
+BEGIN
+
+select * 
+from tbVilles 
+
+End
+
+
+
+ALTER PROCEDURE "DBA"."ajoutPersonne" (in nom varchar(30), in prenom varchar(30), in naissance date, in sexe Dsexe)
+BEGIN
+
+insert into tbPersonnes (persId, persNom, persPrenom, persDateNaiss, persSexe)
+
+values (default, nom, prenom, naissance, sexe);
+
+END
+
+
+ALTER PROCEDURE "DBA"."ajoutVilles"(in libVIlle varchar(20), in codePostal char(4))
+BEGIN
+
+INSERT INTO tbVIlles 
+(vilLib,vilId)
+
+values
+(libVIlle, codePostal);
+
+END
+
+
+ALTER PROCEDURE "DBA"."tableauPersonnes"()
+BEGIN
+
+select tbTestCovid.persId, persPrenom, persNom, persDateNaiss, resulTest
+from tbPersonnes join tbTestCovid
+
+END
+
+ALTER PROCEDURE "DBA"."testCovid"(in idPersonne integer, in dateT date, in dateE date, resultat Dresult)
+BEGIN 
+
+insert into tbTestCovid (persId, dateTest, dateExpiration, resulTest)
+values(idPersonne, dateT, dateE, resultat)
+
+END
+

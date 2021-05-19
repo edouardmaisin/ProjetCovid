@@ -1,0 +1,11 @@
+-afficherPersonne --> call afficherPersonnes()
+
+-affciherVilles -->call afficherVIlles()
+
+-ajouterPersonnes -->call ajoutPersonne(:nom,:prenom,:naissance,:sexe)
+
+-ajouterTest --> call testCovid(:idPersonne,:dateT,:dateE,:resultat)
+
+-ajoutVille --> call ajoutVilles(:libVille,:codePostal)
+
+-tableauPersonnes --> call tableauPersonnes()
